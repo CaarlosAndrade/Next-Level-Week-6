@@ -1,0 +1,49 @@
+.content{
+    display: grid;
+    /* Divisão de quandrantes (no caso 4) */
+    grid-template-columns: 60% 40%; /*Representa a divição de colunas do content (Pagina Home)*/
+    grid-template-rows: 11.4rem 1fr; /*Representa as linhas 1fr é igual a 1 fração (engloba todo o conteudo restante)*/
+
+    grid-template-areas: 
+    'header header'
+    'left right';
+}
+
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+    background: url(/assets/home-bg-img.svg) no-repeat top/contain;
+}
+
+main{
+    grid-area: right;
+    display: flex;
+    align-items: center;
+}
+
+main .container{
+    width: min(36.3rem 100%); /*prioriza o tamanho 36.3, mas pode chegar até 100% quando for menor*/
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: clemp(20px 5vw 2.8rem);
+    color: var(--black);
+    margin-bottom: 2.4rem;
+}
+
+input{
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+    height: 5rem;
+    border-radius: .8rem;
+
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
